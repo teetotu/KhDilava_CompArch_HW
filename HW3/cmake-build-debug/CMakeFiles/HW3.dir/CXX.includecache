@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Shair/Desktop/KhDilavar_CompArch_HW/HW3/main.cpp
+iostream
+-
+algorithm
+-
+pthread.h
+-
+
