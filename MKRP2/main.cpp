@@ -1,50 +1,45 @@
 #include <unistd.h>
 #include "iostream"
-#include<chrono>
+#include <chrono>
 #include <semaphore.h>
 #include <thread>
 
 sem_t s_forks[5];
 
-void think(int i) {
+void startThinking(int i) {
     int secs = 1 + (rand() % 5);
     printf("Философ %d начал думать (%d сек)\n", i, secs);
     sleep(secs);
 }
 
-void eat(int i) {
+void startEating(int i) {
     int leftFork;
     int rightFork;
 
-    if (i == 4) {
-        leftFork = 0;
-        rightFork = i;
-    } else {
-        leftFork = i;
-        rightFork = i + 1;
-    }
+    int secs = 1 + (rand() % 5);
+
+    leftFork = i == 4 ? 0 : i;
+    rightFork = i == 4 ? i : i + 1;
 
     printf("%d-й философ берет левую вилку \n", i);
     sem_wait(&s_forks[leftFork]);
 
     printf("%d-й философ берет правую вилку \n", i);
     sem_wait(&s_forks[rightFork]);
-    int secs = 1 + (rand() % 5);
+
     printf("%d-й философ начал есть (%d сек) \n", i, secs);
     sleep(secs);
 
     sem_post(&s_forks[leftFork]);
     sem_post(&s_forks[rightFork]);
 }
-
-void simulation(int i) {
-    std::chrono::steady_clock::time_point start = std::chrono::steady_clock::now();
+namespace sc = std::chrono;
+void startWork(int i) {
+    sc::steady_clock::time_point start = sc::steady_clock::now();
     while (true) {
-        think(i);
-        eat(i);
-        if (std::chrono::steady_clock::now() - start > std::chrono::seconds(30)) {
-            break;
-        }
+        startThinking(i);
+        startEating(i);
+        if (sc::steady_clock::now() - start > sc::seconds(30)) break;
     }
 }
 
@@ -53,7 +48,7 @@ int main() {
     std::thread philosophers[5];
 
     for (int i = 0; i < 5; i++) {
-        philosophers[i] = std::thread(simulation, i);
+        philosophers[i] = std::thread(startWork, i);
     }
 
     for (auto &phil: philosophers) phil.join();

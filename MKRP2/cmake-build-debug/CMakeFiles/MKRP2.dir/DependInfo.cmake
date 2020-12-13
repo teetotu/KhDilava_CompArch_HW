@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/Shair/Desktop/MKRP2/main.cpp" "/Users/Shair/Desktop/MKRP2/cmake-build-debug/CMakeFiles/MKRP2.dir/main.cpp.o"
+  "/Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2/main.cpp" "/Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2/cmake-build-debug/CMakeFiles/MKRP2.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

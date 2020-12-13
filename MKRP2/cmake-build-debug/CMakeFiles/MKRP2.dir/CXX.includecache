@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/Shair/Desktop/MKRP2/main.cpp
+/Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2/main.cpp
 unistd.h
 -
 iostream
-/Users/Shair/Desktop/MKRP2/iostream
+/Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2/iostream
 chrono
 -
 semaphore.h

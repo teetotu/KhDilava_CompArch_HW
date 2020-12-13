@@ -1,4 +1,4 @@
-# Install script for directory: /Users/Shair/Desktop/MKRP2
+# Install script for directory: /Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/Shair/Desktop/MKRP2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/Shair/Desktop/KhDilavar_CompArch_HW/MKRP2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
