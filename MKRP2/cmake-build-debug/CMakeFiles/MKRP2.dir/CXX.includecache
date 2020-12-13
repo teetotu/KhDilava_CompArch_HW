@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/Shair/Desktop/MKRP2/main.cpp
+unistd.h
+-
+iostream
+/Users/Shair/Desktop/MKRP2/iostream
+chrono
+-
+semaphore.h
+-
+thread
+-
+

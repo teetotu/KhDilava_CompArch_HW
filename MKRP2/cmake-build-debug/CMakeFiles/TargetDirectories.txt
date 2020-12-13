@@ -1,0 +1,3 @@
+/Users/Shair/Desktop/MKRP2/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/Shair/Desktop/MKRP2/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/Shair/Desktop/MKRP2/cmake-build-debug/CMakeFiles/MKRP2.dir
